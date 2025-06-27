@@ -1,0 +1,65 @@
+1	Analysis & Technical Design	DEV	Design	Discussion with Cloud , Arch Team on Technical Design	Done	       		
+								
+4	Execution		Infrastructure					
+2		Dev & QA		OCP & S3 setup + Create and approve AD groups in Dev & QA. OpenShift Namespace Creation	Done	 3-4 Days once after raising the AD group requests. 	" AD Group requests for OCP ""AP_RW-CORP_WVR_RISK_APPDEV_RHOCP "" & "" AP_RW-ocp_ec2_build "". 
+Ousama Anouar - PO
+
+"	Task for the Team to Create a RITM to add each member to the AD Group
+		PSE & Prod		OCP & S3 setup + Create and approve AD groups in PSE & Prod OpenShift Namespace Creation	Open	 3-4 Days once after raising the AD group requests. 		Task for the Team to Create a RITM to add each member to the AD Group
+		Dev		Code repo creation for POC project	Done	2 days - Local seup and clearing cert issues 	https://code.dtcc.com/projects/WVR/repos/weaver-poc/browse	We might not required for Actual Cloud Migration
+		All Enviornments		Need to get access for AD groups by rasing these requests for pipeline access	Done	It takes 5 Days 	"Cloudbees Admin Group; Status: Success; AD Group Name: AP_WVR_ADMIN_CBJ
+
+Cloudbees Update Group; Status: Success; AD Group Name: AP_WVR_UPDATE_CBJ
+
+Cloudbees Read Group; Status: Success; AD Group Name: AP_WVR_READ_CBJ"	Task for the Team should be part fo these AD Groups
+				CaaS team to inform Aqua CSP team (Aqua CSP aquacsp@dtcc.com) on the new repo creation	Open	1 Day 		Information Req. in case of any challenges in containers
+				Need to get access for these urls 	Done	1 Day 	"This is the common page for OCP:
+
+https://openshift-portal.dtcc.com/dev 
+
+https://console-openshift-console.apps.usedev001.ocp.appdev.dtcc.org/dashboards 
+"	Team should enable to AD groups to access these portals by each environment specific
+								
+				SSP Pipeline Creation for build and deployment 	In Progress	2-3 weeks once after after CM request. And after that need to raise request for a RITM " RITM2430245"	Jenkins pipeline for build & deployment	We should check if this pipeline task might scale up for cloud migration
+				To get bitbucket access raise these AD group request 	Done	It takes 3-4 days once after raising the access .	"Bitbucket Admin Group; Status: Success; AD Group Name: AP_WVR_ADMIN_BBK
+
+Bitbucket Update Group; Status: Success; AD Group Name: AP_WVR_UPDATE_BBK
+
+Bitbucket Read Group; Status: Success; AD Group Name: AP_WVR_READ_BBK"	We might need this task for actual Cloud Migration. The code will deploy from Lower to higher enviorments and no local code involvement
+				SSP OpenShift Container Onboarding workflow	Open	3	https://edso.dtcc.com/clic/#/configmanagement/environmentBuilder	No additional task required for Actual cloud Migration
+								
+				Set-up Hvault 	Done	2 weeks along with change management	Sample ticket - RITM1754485	No additional task required for Actual cloud Migration
+				Hvault - Onboarding service acct, add secrets & AD Group membership 	In Progress	2 weeks along with change management	"Refer Image below
+"	No additional task required for Actual cloud Migration
+				Firewall - request to connect to Ping & DB	Open	In our case - We are not using Firewall  	"CaaS DL - CaaS SRE Engineering CHSEngineering@dtcc.com
+Sample Ticket - RITM0971212
+
+The turn around time for this ticket to be implemented is between 1 
+to 2 weeks by Network team.
+"	Infra Req to create for the migration
+				Inbound / Out-Bound port & certificates for API Access - mtls + Route setup	Open		"Refer Developer guide
+"	Sujith will check this task and update
+			Development			 		
+				Setup local OC & CLI - Only for Dev env	Open			No additional task required for Actual cloud Migration
+				Access to the OpenShift Bitbucket repository	Open			Not required
+				Environment configuration using ConfigMaps	Open			
+				Setup Application probes - Liveliness & Readiness	Open		OCP Catalog doc	
+				Hvault integration	Open		"Check with CCW team on avlbl libs
+Test cluster connectivity & egress checks using 
+https://petstore-petstore-qa-001.apps.useqa001.ocp.appqa.dtcc.org/network"	
+				Add Snowflake Cloud Database contectivity with Sample Data 	Open		"Test cluster connectivity & egress checks using 
+https://petstore-petstore-qa-001.apps.useqa001.ocp.appqa.dtcc.org/network"	
+				Add Athena Cloud Database contectivity with Sample Data 	Open		"Test cluster connectivity & egress checks using 
+https://petstore-petstore-qa-001.apps.useqa001.ocp.appqa.dtcc.org/network"	
+				PING Integration	Open			
+				LDAP integration	Open			
+				S3 Integration 	Open			
+				Integration for logging into  splunk/Kibana/prometheus	Open			
+				Exposing API via Routes, mtls	Open			
+			Deployment					
+				Image Creation	Open			
+				Helm Configuration	Open			
+				Quotas & Limit configuration	Open			
+				Run and Test the deployment of POC Application using Jenkins CI/CD pipeline 	Open		https://openshift-portal.dtcc.com/deploymentrequirements	
+								
+								
